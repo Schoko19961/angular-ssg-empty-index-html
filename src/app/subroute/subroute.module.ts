@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SubrouteComponent } from './subroute.component';
 import { SubsubComponent } from './subsub.component';
-import { routerGuard } from './router.guard';
 
 @NgModule({
   imports: [
@@ -10,7 +9,7 @@ import { routerGuard } from './router.guard';
       {
         path: '',
         component: SubrouteComponent,
-        canActivate: [routerGuard],
+        canActivate: [],
         children: [
             {
                 path: 'subsub',
